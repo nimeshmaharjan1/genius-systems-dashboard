@@ -1,0 +1,51 @@
+@mixin top-section {
+  height: 4rem;
+  align-items: center;
+}
+@mixin remove-mp {
+  margin: 0;
+  padding: 0;
+}
+.side-bar-section {
+  font-family: var(--nav-font);
+  flex: 1;
+  height: 100vh;
+  border-right: 0.5px solid var(--border-color);
+  .logo-section {
+    justify-content: center;
+    @include top-section();
+    .logo {
+      font-family: var(--main-font);
+      font-size: var(--title-size);
+      color: var(--font-color);
+      font-weight: bold;
+    }
+  }
+  hr {
+    height: 0;
+    border: 0.5px solid var(--border-color);
+    @include remove-mp();
+  }
+  .nav-items {
+    ul {
+      list-style: none;
+      @include remove-mp();
+      li {
+        cursor: pointer;
+        padding: 1rem;
+        &:hover {
+          background-color: var(--bg-variant);
+        }
+        .nav-icon {
+          color: var(--font-color);
+          font-size: 1.4rem;
+        }
+        span {
+          font-size: 0.9rem;
+          color: rgb(66, 66, 66);
+          margin-left: 0.4rem;
+        }
+      }
+    }
+  }
+}

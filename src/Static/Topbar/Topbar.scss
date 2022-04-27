@@ -1,0 +1,15 @@
+.top-bar-section {
+  flex-direction: row-reverse;
+  height: 4rem;
+  padding-right: 2rem;
+  border-bottom: 0.5px solid var(--border-color);
+  .icon {
+    font-size: 1.4rem;
+    cursor: pointer;
+    padding: 1rem;
+    transition: var(--transition);
+    &:hover {
+      color: var(--font-color);
+    }
+  }
+}

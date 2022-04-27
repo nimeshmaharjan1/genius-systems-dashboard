@@ -1,9 +1,9 @@
 import "./App.scss";
-
+import Layout from "./Layout/Layout";
 function App() {
   return (
     <>
-      <h1>Hello</h1>
+      <Layout></Layout>
     </>
   );
 }
