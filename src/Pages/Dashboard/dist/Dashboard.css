@@ -1,0 +1,35 @@
+.dashboard-section {
+  flex: 6;
+}
+.dashboard-section .label {
+  color: green;
+}
+.dashboard-section .total-users-card {
+  width: 25%;
+  font-family: var(--main-font);
+}
+.dashboard-section .total-users-card .row {
+  justify-content: space-between;
+}
+.dashboard-section .total-users-card h2 {
+  font-size: 1.2rem;
+  opacity: var(--opacity);
+}
+.dashboard-section .user-plan-card {
+  font-family: var(--main-font);
+  width: 68%;
+}
+.dashboard-section .user-plan-card .row {
+  justify-content: space-between;
+}
+.dashboard-section .user-plan-card h2 {
+  font-size: 1.2rem;
+  opacity: var(--opacity);
+}
+.dashboard-section footer p {
+  padding-bottom: 0.2rem;
+  width: 32%;
+  font-size: 0.9rem;
+  font-family: var(--nav-font);
+  border-bottom: 1px solid gray;
+}

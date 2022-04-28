@@ -17,7 +17,7 @@
     .logo {
       font-family: var(--main-font);
       font-size: var(--title-size);
-      color: var(--font-color);
+      color: var(--brand-color);
       font-weight: bold;
     }
   }
@@ -37,10 +37,13 @@
           background-color: var(--bg-variant);
         }
         .nav-icon {
-          color: var(--font-color);
-          font-size: 1.4rem;
+          color: var(--brand-color);
+          font-size: 1.8rem;
         }
         span {
+          font-weight: bold;
+          opacity: 0.8;
+          font-family: var(--main-font);
           font-size: 0.9rem;
           color: rgb(66, 66, 66);
           margin-left: 0.4rem;
