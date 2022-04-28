@@ -7,8 +7,8 @@ import Sidebar from "../Static/Sidebar/Sidebar";
 const Layout = () => {
   return (
     <main className="main-section row">
-      <Sidebar></Sidebar>
       <BrowserRouter>
+        <Sidebar></Sidebar>
         <Routes>
           <Route path="/">
             <Route index element={<Dashboard />}></Route>

@@ -3,7 +3,9 @@ import Topbar from "../../Static/Topbar/Topbar";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { useEffect, useState } from "react";
 import subscriptionsJson from "../../Data/subscriptions.json";
-import usersJson from "../../Data/users.json";
+import ActiveUsers from "../../Components/ActiveUsers";
+import Subscription from "../../Components/Subscription";
+import Users from "../Users/Users";
 const Dashboard = () => {
   const [users, setUsers] = useState([]);
   const [subscriptions, setSubscriptions] = useState([]);
@@ -16,14 +18,9 @@ const Dashboard = () => {
     //   return json;
     // };
     // const result = fetchData().catch(console.error);
-    setUsers(usersJson);
+    // setUsers(usersJson);
     setSubscriptions(subscriptionsJson);
   }, []);
-  const handleClick = () => {
-    console.log(uniquePlans);
-  };
-  const plans = subscriptions.map((subscription) => subscription.package);
-  const uniquePlans = [...new Set(plans)];
   return (
     <section className="dashboard-section">
       <Topbar></Topbar>
@@ -37,9 +34,9 @@ const Dashboard = () => {
                 <p>20%</p>
               </div>
             </div>
-            <footer>
+            <ActiveUsers />
+            <footer style={{ marginTop: "1.5rem" }}>
               <p>See all users</p>
-              <button onClick={handleClick}>Click</button>
             </footer>
           </div>
           <div className="card user-plan-card">
@@ -50,12 +47,13 @@ const Dashboard = () => {
                 <p>20%</p>
               </div>
             </div>
+            <Subscription></Subscription>
           </div>
         </div>
-        {subscriptions &&
-          subscriptions.map((subscription) => {
-            return <div key={subscription.id}>{subscription.package}</div>;
-          })}
+        <div className="card featured-users-card">
+          <h2>FEATURED USERS</h2>
+          <Users></Users>
+        </div>
       </div>
     </section>
   );

@@ -1,7 +1,7 @@
 .side-bar-section {
   font-family: var(--nav-font);
   flex: 1;
-  height: 100vh;
+  min-height: 100vh !important;
   border-right: 0.5px solid var(--border-color);
 }
 .side-bar-section .logo-section {
@@ -42,6 +42,6 @@
   opacity: 0.8;
   font-family: var(--main-font);
   font-size: 0.9rem;
-  color: #424242;
+  color: #eaeaea;
   margin-left: 0.4rem;
 }

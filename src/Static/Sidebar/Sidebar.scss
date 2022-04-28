@@ -9,7 +9,7 @@
 .side-bar-section {
   font-family: var(--nav-font);
   flex: 1;
-  height: 100vh;
+  min-height: 100vh !important;
   border-right: 0.5px solid var(--border-color);
   .logo-section {
     justify-content: center;
@@ -45,7 +45,7 @@
           opacity: 0.8;
           font-family: var(--main-font);
           font-size: 0.9rem;
-          color: rgb(66, 66, 66);
+          color: rgb(234, 234, 234);
           margin-left: 0.4rem;
         }
       }

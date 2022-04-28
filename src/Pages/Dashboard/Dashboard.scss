@@ -1,7 +1,8 @@
 @mixin card-header {
   h2 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     opacity: var(--opacity);
+    letter-spacing: 1px;
   }
 }
 .dashboard-section {
@@ -28,10 +29,15 @@
   footer {
     p {
       padding-bottom: 0.2rem;
-      width: 32%;
+      width: 30%;
       font-size: 0.9rem;
       font-family: var(--nav-font);
-      border-bottom: 1px solid gray;
+      border-bottom: 1px solid rgb(194, 194, 194);
     }
+  }
+  .featured-users-card {
+    margin-top: 1rem;
+    font-family: var(--main-font);
+    @include card-header();
   }
 }
