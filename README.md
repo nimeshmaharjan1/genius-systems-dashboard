@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+First of all, I would to apologise for being late in the submission of the assessment. The main reason for the delay in the submission was the deadline for my final year project which on the 27th April along with another deadline for a groupwork which is on 4th May due to which I was not able to implement the pagination and single user detail functionality into this assessment.
+This project has been developed in React Js with Sass preprocessor and custom CSS (proper styling could not be implemented due the above specified reason),  along with the following dependencies:
+  * **Recharts**: used for the development of charts for the active/unactive users along with users subscriptions plan statistics visualization. <br>
+  * **React-table**: used for the creation of tables for the vizualization of users in the dashboard and in the users page. Furthermore, the sorting and filtering functionalities also have been implemented into the table excluding the pagination functionallity.
+  * **Sass**
+  * **Material UI React** has been installed but not used in the project. It was installed to use its data grid component, instead react-table has been used.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Please run npm install to install the dependencies before running the application.
 
-## Available Scripts
+The following images are the screenshots of the application UI.
 
-In the project directory, you can run:
+![image](https://user-images.githubusercontent.com/86953478/165911652-069492d5-9d51-4a4a-8401-af88c146a00d.png)
+* Hover over the charts to view the data.
 
-### `npm start`
+![image](https://user-images.githubusercontent.com/86953478/165911809-f779adf0-66b1-40a2-ab70-305834899988.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Users per plan
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![image](https://user-images.githubusercontent.com/86953478/165912006-5ff247e9-2e73-4e9d-9c2e-f8151c979b10.png)
 
-### `npm test`
+* Search functionality
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![image](https://user-images.githubusercontent.com/86953478/165912069-51ff4829-1af7-403a-8005-3bf6a116a7bf.png)
 
-### `npm run build`
+* Click on any of the column headers to sort ascending and descending order
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![image](https://user-images.githubusercontent.com/86953478/165912287-45d1aef0-e820-43ed-985b-0d7ef3d73470.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![image](https://user-images.githubusercontent.com/86953478/165912327-129183fb-cdc1-482e-a892-83c082eede07.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Total Users
+  * The same component has been called in the dashboard section but the data passed into the table has been sliced to show the top five users.
+    ![image](https://user-images.githubusercontent.com/86953478/165912859-51838a11-92e7-417c-9b54-9cdc3c06bb13.png)
 
-### `npm run eject`
+![image](https://user-images.githubusercontent.com/86953478/165912686-8336d26e-9a95-43c6-a33f-2c42d0dc8f7f.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
