@@ -54,6 +54,7 @@ const Users = () => {
       <div className="container">
         <div className="row">
           <div className="card users-list">
+          <h1 className="title">USERS</h1>
             <Datatable columns={columns} data={data}></Datatable>
           </div>
         </div>
