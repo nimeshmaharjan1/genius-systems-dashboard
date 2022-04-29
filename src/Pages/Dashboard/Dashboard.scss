@@ -8,7 +8,7 @@
 .dashboard-section {
   flex: 6;
   .label {
-    color: green;
+    color: rgb(148, 219, 148);
   }
   .total-users-card {
     width: 25%;
@@ -37,6 +37,8 @@
   }
   .featured-users-card {
     margin-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
     font-family: var(--main-font);
     @include card-header();
   }

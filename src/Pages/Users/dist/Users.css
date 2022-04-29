@@ -2,6 +2,8 @@
   margin-bottom: 1rem;
   flex: 6;
   width: 100%;
+  font-family: var(--main-font);
+  font-size: 0.9rem;
 }
 .users-section .users-list {
   width: 100%;

@@ -1,14 +1,51 @@
 import "./Dashboard.scss";
 import Topbar from "../../Static/Topbar/Topbar";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-import { useEffect, useState } from "react";
-import subscriptionsJson from "../../Data/subscriptions.json";
+import React, { useEffect, useMemo, useState } from "react";
+import usersJson from "../../Data/users.json";
 import ActiveUsers from "../../Components/ActiveUsers";
 import Subscription from "../../Components/Subscription";
-import Users from "../Users/Users";
+import FeaturedUsers from "../../Components/FeaturedUsers";
+import Datatable from "./Datatable/Datatable";
+import { Link } from "react-router-dom";
+
+// import axios from "axios";
 const Dashboard = () => {
   const [users, setUsers] = useState([]);
-  const [subscriptions, setSubscriptions] = useState([]);
+  const [data, setData] = useState([]);
+  const columns = React.useMemo(
+    () => [
+      {
+        Header: "First Name",
+        accessor: "first_name",
+      },
+      {
+        Header: "Middle Name",
+        accessor: "middle_name",
+      },
+      {
+        Header: "Last Name",
+        accessor: "last_name",
+      },
+      {
+        Header: "Username",
+        accessor: "username",
+      },
+      {
+        Header: "E-mail",
+        accessor: "email",
+      },
+      {
+        Header: "Address",
+        accessor: "address",
+      },
+      {
+        Header: "Country",
+        accessor: "country",
+      },
+    ],
+    []
+  );
   useEffect(() => {
     // const fetchData = async () => {
     //   const data = await fetch("subscriptions.json");
@@ -19,8 +56,15 @@ const Dashboard = () => {
     // };
     // const result = fetchData().catch(console.error);
     // setUsers(usersJson);
-    setSubscriptions(subscriptionsJson);
-  }, []);
+    // setSubscriptions(subscriptionsJson);
+    // (async () => {
+    //   const result = await axios("../../Data/users.json");
+    //   setData(result.data);
+    //   console.log(data);
+    // })();
+    setUsers(usersJson);
+    setData(users.slice(0, 5));
+  }, [users]);
   return (
     <section className="dashboard-section">
       <Topbar></Topbar>
@@ -31,7 +75,7 @@ const Dashboard = () => {
               <h2>TOTAL USERS</h2>
               <div className="label row align-items-center">
                 <KeyboardArrowUpIcon />
-                <p>20%</p>
+                <p>48%</p>
               </div>
             </div>
             <ActiveUsers />
@@ -52,7 +96,7 @@ const Dashboard = () => {
         </div>
         <div className="card featured-users-card">
           <h2>FEATURED USERS</h2>
-          <Users></Users>
+          <Datatable columns={columns} data={data}></Datatable>
         </div>
       </div>
     </section>

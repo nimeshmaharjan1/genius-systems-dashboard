@@ -2,7 +2,7 @@
   flex: 6;
 }
 .dashboard-section .label {
-  color: green;
+  color: #94db94;
 }
 .dashboard-section .total-users-card {
   width: 25%;
@@ -37,6 +37,8 @@
 }
 .dashboard-section .featured-users-card {
   margin-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
   font-family: var(--main-font);
 }
 .dashboard-section .featured-users-card h2 {
